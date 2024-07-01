@@ -174,4 +174,6 @@ add_subdirectory(source)
 add_subdirectory(tools)
 add_subdirectory(test)
 
-FetchContent_MakeAvailable(freertos_kernel cmock)
+if(PROJECT_IS_TOP_LEVEL)
+    FetchContent_MakeAvailable(freertos_kernel cmock)
+endif()
